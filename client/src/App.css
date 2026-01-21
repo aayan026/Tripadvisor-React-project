@@ -1,0 +1,367 @@
+button {
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+body {
+  margin: 0;
+  max-width: 100%;
+  font-family: '', sans-serif;
+}
+
+.mainContainer {
+  max-width: 75%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20%;
+}
+
+
+
+
+
+/* ------------------------ Filter ---------------------------*/
+
+.filter-button {
+  width: 15%;
+  font-size: large;
+  height: 50px;
+  display: flex;
+  align-items: center;
+}
+
+.filter-button img {
+  margin-right: 4px;
+}
+.filterPage_main{
+  display: flex;
+  flex-direction: column;
+}
+.filterpageContainer {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.title6 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid rgba(110, 110, 110, 0.158);
+  border-bottom: 1px solid rgba(126, 126, 126, 0.205);
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+
+.title6 p {
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.336);
+}
+
+.title6 h1 {
+  font-size: 40px;
+  font-family: "Montserrat";
+  font-weight: 1000;
+}
+
+.filterPage_main {
+  display: flex;
+}
+
+
+.layout5 {
+  display: flex;
+  gap: 5px;
+}
+
+.layout5 select {
+  width: 160px;
+  height: 50px;
+  border-radius: 99px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 16px;
+}
+
+.layout5 .amenitiesSelect button{
+  width: 160px;
+    border-radius: 99px;
+  height: 50px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 16px;
+}
+
+.rating-btn {
+  width: 230px;
+  display: flex;
+  padding-left: 20px;
+  height: 50px;
+  padding-right: 20px;
+  align-items: center;
+  border: 1px solid #0f500f60;
+  border-radius: 99px;
+}
+
+.rating-btn p {
+  margin-left: 10px;
+  font-size: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+.rating7 {
+  display: flex;
+  gap: 2px;
+}
+
+.dot {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid #17914a;
+}
+
+.dot.filled {
+  background-color: #168f48;
+}
+
+
+
+/* ==== LAYOUT ==== */
+.flex {
+  display: flex;
+  gap: 24px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.filterPage_main {
+  flex: 1.2;
+}
+
+.mapContainer {
+  flex: 1;
+  position: sticky;
+  top: 20px;
+  height: calc(100vh - 40px);
+}
+
+.map {
+  height: 90%;
+  width: 100%;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 25px 60px rgba(0,0,0,0.12);
+}
+
+
+.amenitiesSelect {
+  position: relative;
+}
+
+.selectBtn {
+  padding: 10px 14px;
+  width: 130px;
+  height: 40px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  background: #fff;
+  cursor: pointer;
+}
+
+.count {
+  margin-left: 6px;
+  background: #000;
+  color: #fff;
+  padding: 2px 6px;
+  border-radius: 10px;
+  font-size: 12px;
+}
+
+.amenitiesModal {
+  position: absolute;
+  top: 50px;
+  left: -400px;
+  width: 740px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, .15);
+  padding: 16px;
+  z-index: 1000;
+}
+
+
+.modalHeader {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.modalHeader input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 20px;
+  height: 30px;
+  border: 1px solid #ccc;
+}
+
+.closeBtn {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.amenitiesGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin: 20px 0;
+  max-height: 370px;
+  overflow-y: auto;
+}
+
+.amenityItem {
+  width: 230px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 17px;
+}
+
+.amenityItem input[type="checkbox"] {
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+}
+
+
+.modalFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.resetBtn {
+  width: 100px;
+  height: 40px;
+  border: none;
+  color: #000;
+  border: 1px solid #000;
+  border-radius: 99px;
+  font-weight: 500;
+  font-size: 16px;
+  padding-top: 1px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  cursor: pointer;
+}
+
+.applyBtn {
+  width: 100px;
+  height: 40px;
+  background: #004f32;
+  color: #fff;
+  font-weight: 500;
+  font-size: 16px;
+  border: none;
+  padding: 10px;
+  padding-top: 7px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+
+
+/* ==== PLACES ==== */
+.places {
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 22px;
+}
+
+.placeCard {
+  background: #fff;
+  padding: 20px;
+  margin-top: 2%;
+  border-radius: 18px;
+  box-shadow: 0 5px 25px rgba(0,0,0,0.08);
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.placeCard:hover {
+  box-shadow: 0 20px 45px rgba(0,0,0,0.15);
+}
+
+.placeCard h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.placeCard p {
+  color: #666;
+  font-size: 14px;
+}
+
+
+#review8 {
+  font-size: 16px;
+  margin-left: 10px;
+
+}
+.rating8{
+  align-items: center;
+  display: flex; 
+  gap: 2px;
+}
+
+.rating8 p {
+  font-size: 17px;
+  margin-right: 7px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.circle8 {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 1px solid #109442;
+}
+
+.circle8.full {
+  background: #0b8a3b;
+}
+
+.circle8.empty {
+  background: transparent;
+}
+
+.circle8.half {
+  background: linear-gradient(
+    to right,
+    #0a8f3c 50%,
+    transparent 50%
+  );
+}
+.placeCard{
+  display: flex;
+  gap: 17px;
+
+}
+.imagecontainer img{
+  width: 350px;
+  height: 300px;
+}
+.placeBtn {
+  all: unset;          
+  display: block;
+  width: 100%;
+  cursor: pointer;
+}
+
+.placeBtn .placeCard {
+  display: flex;
+  gap: 17px;
+}
+

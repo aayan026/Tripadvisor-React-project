@@ -1,0 +1,187 @@
+.detailContainer {
+    margin-top: 30px;
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.editPlace {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-right: 180px;
+    margin-bottom: 200px;
+}
+
+.editBtn,
+.deleteBtn {
+    width: 150px;
+    height: 40px;
+    padding: 10px 18px;
+    font-weight: 600;
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    border: 1px solid #3f3f3f25;
+
+}
+
+.editBtn {
+    background: #2a8f5a;
+    color: #fff;
+}
+
+.editBtn:hover {
+    background: #1f6e45;
+}
+
+.deleteBtn {
+    background: #ff5c5c;
+    color: #fff;
+}
+
+.deleteBtn:hover {
+    background: #e04343;
+}
+
+.editPanel {
+    display: flex;
+    flex-direction: column;
+    padding: 22px;
+    width: 500px;
+    border-radius: 16px;
+    background: #a8a8a81c;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    border: 1px solid #3f3f3f25;
+    animation: slideDown 0.3s ease-out;
+}
+
+.editPanel h3 {
+    margin-bottom: 16px;
+    color: #1f3d2b;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+/* ========== INPUTS ========== */
+.editPanel input,
+.editPanel textarea {
+    margin-bottom: 12px;
+    padding: 12px 14px;
+    max-width: 460px;
+    max-height: 30px;
+    border-radius: 10px;
+    border: 1px solid #4141412a;
+    font-size: 14px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: all 0.2s;
+    outline: none;
+}
+
+.editPanel input:focus,
+.editPanel textarea:focus {
+    border-color: #2a8f5a;
+    box-shadow: 0 0 6px rgba(42, 143, 90, 0.4);
+}
+
+.editPanel textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.editActions {
+    display: flex;
+    gap: 12px;
+    margin-top: 14px;
+}
+
+.saveBtn {
+    width: 100%;
+    background: #2a8f5a;
+    color: #fff;
+    border: none;
+    padding: 10px 22px;
+    border-radius: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+.saveBtn:hover {
+    background: #1f6e45;
+}
+
+.popup-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  backdrop-filter: blur(3px);
+}
+
+.popup {
+  background: #ffffff;
+  width: 420px;
+  border-radius: 14px;
+  padding: 28px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+  animation: scaleIn 0.25s ease;
+}
+
+.popup h3 {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 600;
+  color: #111;
+}
+
+.popup p {
+  margin-top: 12px;
+  font-size: 15px;
+  color: #555;
+  line-height: 1.5;
+}
+
+.popup-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.confirm-btn {
+  background: #d93025;
+  color: #fff;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.confirm-btn:hover {
+  background: #b3261e;
+}
+
+.cancel-btn {
+  background: #f1f3f4;
+  color: #333;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.cancel-btn:hover {
+  background: #e0e0e0;
+}
