@@ -30,10 +30,10 @@
 }
 
 .circle {
-  width: 17px;
-  height: 17px;
+  width: 20px;
+  height: 20px;
   border-radius: 50%;
-  border: 1px solid #126130;
+  border: 1px solid #13853e;
 }
 
 .circle.full {

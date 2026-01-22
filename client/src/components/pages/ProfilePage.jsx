@@ -1,6 +1,7 @@
 // ProfilePage.jsx
 import { useSelector, useDispatch } from "react-redux";
 import { useMemo, useState } from "react";
+import { deleteSavedPlace, deleteReview } from "../store/slices/userSlice";
 import "../../styles/ProfilePage.css";
 
 export default function ProfilePage() {
@@ -38,18 +39,18 @@ export default function ProfilePage() {
     };
 
     const handleDeleteSaved = (id) => {
-        dispatch({ type: "DELETE_SAVED_PLACE", payload: id });
+        dispatch(deleteSavedPlace(id));
     };
 
     const handleDeleteReview = (id) => {
-        dispatch({ type: "DELETE_REVIEW", payload: id });
+        dispatch(deleteReview(id));
     };
 
     return (
         <div className="profile-wrapper">
 
             <div className="profile-header">
-                <img className="profile-avatar" src={user.avatar || "https://via.placeholder.com/100"} alt="avatar" />
+                <img className="profile-avatar" src={user.avatar || "https://i.pinimg.com/736x/7e/95/b6/7e95b6d4d801f928b457d4277b67c451.jpg"} alt="avatar" />
                 <div className="profile-userinfo">
                     <h2>{user.name} {user.surname}</h2>
                     <p>{user.email}</p>
@@ -84,8 +85,8 @@ export default function ProfilePage() {
                 {tab === "reviews" && (
                     <div className="reviews-grid">
                         {reviews.length === 0 && <p className="empty-text">No reviews yet.</p>}
-                        {reviews.map(r => (
-                            <div key={r.id} className="review-card">
+                        {reviews.map((r, index)  => (
+                            <div key={index} className="review-card">
                                 <div className="review-header">
                                     <h4>{r.title}</h4>
                                     <button className="delete-btn" onClick={() => handleDeleteReview(r.id)}>Delete</button>

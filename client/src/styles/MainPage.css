@@ -216,6 +216,8 @@ body.suggestion-open {
 .items button {
   background: none;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    all: unset;
+    display: block;
 
   border: none;
   text-align: left;
@@ -281,11 +283,13 @@ body.suggestion-open {
   list-style: none;
   padding: 0;
   overflow-x: hidden;
+  
 }
 
 
 .featured-item {
   flex: 0 0 35%;
+
   max-width: 30%;
   background: #fff;
   border-radius: 15px;
@@ -299,6 +303,7 @@ body.suggestion-open {
 
 .placeImg {
   width: 100%;
+  margin-left: 5px;
   height: 300px;
   object-fit: cover;
 }
@@ -324,8 +329,12 @@ body.suggestion-open {
 /* Info */
 
 .info {
-  margin-top: 150px;
-  padding-left: 4px;
+  padding: 10px;
+  width: 386px;
+  height: 130px;
+  padding-top: 140px;
+  border-radius: 20px;
+  background-color: #b6b6b61a;
 }
 
 .city {
@@ -336,8 +345,7 @@ body.suggestion-open {
 
 .info h3 {
   display: flex;
-  justify-content: start;
-  font-size: 23px;
+  font-size: 21px;
   margin-top: 0px;
   font-weight: 500;
   font-family: 'Montserrat', sans-serif;
@@ -431,7 +439,7 @@ body.suggestion-open {
 .donate-wrapper {
   max-width: 1280px;
   margin: 80px auto;
-  margin-top: 15%;
+  margin-top: 12%;
   display: flex;
   background: #c4c4c433;
   align-items: center;

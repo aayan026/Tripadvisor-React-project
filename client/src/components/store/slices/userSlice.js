@@ -34,9 +34,19 @@ const userSlice = createSlice({
       });
 
       localStorage.setItem("reviews", JSON.stringify(state.reviews));
+    },
+    deleteSavedPlace(state, action) {
+      const placeId = action.payload;
+      state.saved = state.saved.filter(place => place.id !== placeId);
+      localStorage.setItem("saved", JSON.stringify(state.saved));
+    },
+    deleteReview(state, action) {
+      const reviewId = action.payload;
+      state.reviews = state.reviews.filter(review => review.id !== reviewId);
+      localStorage.setItem("reviews", JSON.stringify(state.reviews));
     }
   },
 });
 
-export const { toggleSave, addReview } = userSlice.actions;
+export const { toggleSave, addReview, deleteSavedPlace, deleteReview } = userSlice.actions;
 export default userSlice.reducer;

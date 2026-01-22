@@ -131,8 +131,6 @@ function DetailPage() {
                                         <p className="bold">category <span>{place.category}</span></p>
                                         <p className="bold">city <span>{place.city}</span></p>
                                         <p className="bold">Address <span>{place.address}</span></p>
-                                        <p className="bold">contact <span>{place.contact.phone}</span></p>
-
                                     </div>
                                 </div>
 

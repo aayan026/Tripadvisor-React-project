@@ -14,9 +14,9 @@ import ReviewPage from './components/pages/ReviewPage.jsx'
 import Header from './components/Layout/Header.jsx'
 import ProfilePage from './components/pages/ProfilePage.jsx'
 import FilterPage from './components/pages/FilterPage.jsx'
-import AdminPlaces from './components/pages/admin/AdminPlaces.jsx'
 import EditPlace from './components/pages/admin/EditPlace.jsx'
 import AdminPlaceDetails from './components/pages/admin/AdminPlaceDetails.jsx'
+import AdminPage from './components/pages/admin/AdminPage.jsx'
 
 const router = createBrowserRouter([
     {
@@ -68,8 +68,8 @@ const router = createBrowserRouter([
             }
             ,
             {
-                element: <AdminPlaces />,
-                path: "/admin"
+                element: <AdminPage />,
+                path: "/admin",
             },
             {
                 element: <AdminPlaceDetails />,

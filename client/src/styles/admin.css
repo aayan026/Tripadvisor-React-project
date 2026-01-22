@@ -1,6 +1,6 @@
 .admin-header {
     max-width: 100%;
-    margin:0 5px;
+    margin: 0 5px;
     padding: 16px 20px;
     background: #f6fbf8;
     border-radius: 14px;
@@ -97,15 +97,19 @@
     transform: translateY(-4px);
 }
 
-.imagecontainer2 {
-    height: 200px;
-    background: #eef7f2;
+    
+.filters button{
+    width: 400px;
+    border-radius: 99px;
+    border: 1px solid #6161618c;
+    font-size: 17px;
 }
-
 .placeImg2 {
     width: 100%;
-    height: 100%;
     object-fit: cover;
+    height: 200px;
+    max-height: 200px;
+    background: #eef7f2;
 }
 
 .aboutcontainer2 {
@@ -161,11 +165,160 @@
     display: block;
     height: 4px;
     background: linear-gradient(90deg, #2a8f5a, #6fcf97);
-}.placeBtn2 {
-  all: unset;          
-  display: block;
-  width: 100%;
-  cursor: pointer;
+}
+
+.placeBtn2 {
+    all: unset;
+    display: block;
+    width: 100%;
+    cursor: pointer;
 }
 
 
+/**/
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    padding: 16px;
+}
+
+.modal-content {
+    background: #ffffff;
+    width: 1200px;
+    max-width: 95%;
+    max-height: 85vh;
+    border-radius: 18px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25), 0 0 0 1px rgba(0, 0, 0, 0.05);
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 24px;
+}
+
+/* FORM PANEL */
+.createPanel h3 {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 18px;
+    color: #1f3d2b;
+}
+
+.filters input, textarea, select {
+    width: 80%;
+    padding: 10px 12px;
+    border-radius: 8px;
+    border: 1px solid #d1d5db;
+    font-size: 13px;
+    font-family: inherit;
+    transition: all 0.2s ease;
+}
+
+.filters  input:focus, textarea:focus, select:focus {
+    outline: none;
+    border-color: #2a8f5a;
+    box-shadow: 0 0 0 3px rgba(42, 143, 90, 0.1);
+}
+
+.filters textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+/* FORM GROUP */
+.form-group {
+    margin-bottom: 12px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-weight: 600;
+    margin-bottom: 4px;
+    color: #1f3d2b;
+    font-size: 12px;
+}
+
+/* FORM ROW */
+.form-row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+/* CHECKBOX */
+.form-group.checkbox {
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.form-group.checkbox label {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+    margin: 0;
+}
+
+.form-group.checkbox input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+    accent-color: #2a8f5a;
+}
+
+/* FILE INFO */
+.file-info {
+    font-size: 12px;
+    color: #4b5563;
+    margin-top: 6px;
+    font-weight: 500;
+}
+
+/* BUTTONS */
+.editActions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 16px;
+    padding-top: 16px;
+    border-top: 1px solid #e5e7eb;
+}
+
+.saveBtn {
+    background: #2a8f5a;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 13px;
+}
+
+.saveBtn:hover {
+    background: #207a47;
+    transform: translateY(-0.5px);
+}
+
+.cancelBtn {
+    background: #f3f4f6;
+    color: #374151;
+    border: 1px solid #d1d5db;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 13px;
+}
+
+.cancelBtn:hover {
+    background: #e5e7eb;
+}

@@ -52,9 +52,6 @@ function AdminPlaceDetails() {
             category: formData.category,
             city: formData.city,
             address: formData.address,
-            contact: {
-                phone: formData.phone
-            }
         };
 
         dispatch(
@@ -135,8 +132,6 @@ function AdminPlaceDetails() {
                                     <p className="bold">category <span>{place.category}</span></p>
                                     <p className="bold">city <span>{place.city}</span></p>
                                     <p className="bold">Address <span>{place.address}</span></p>
-                                    <p className="bold">contact <span>{place.contact.phone}</span></p>
-
                                 </div>
                             </div>
 

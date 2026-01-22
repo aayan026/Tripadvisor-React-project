@@ -52,7 +52,7 @@ function FilterPage() {
     const isAuth = useSelector(s => s.auth.isAuth)
     const userEmail = useSelector(s => s.auth.user?.email);
 
-  
+
 
     const position = [40.4093, 49.8671];
     return (
@@ -146,7 +146,7 @@ function FilterPage() {
                             ) : (
 
                                 filteredPlaces.map((place => (
-                                    <button className="placeBtn" onClick={()=>navigate(`/detail/${place.id}`)}>
+                                    <button className="placeBtn" onClick={() => navigate(`/detail/${place.id}`)}>
                                         <div key={place.id} className="placeCard">
 
                                             <div className="imagecontainer">
@@ -164,9 +164,11 @@ function FilterPage() {
                                                     ))}
                                                     <p id="review8">{`( ${place.reviewsCount} reviews8)`}</p>
                                                 </div>
-                                                <p>{place.description}</p>
                                                 <p>working hours: {place.workingHours}</p>
-                                                <p>{place.category}</p>
+                                                <div className="addressdesc">
+                                                    <p>{place.address}</p>
+                                                    <p>{place.description}</p>
+                                                </div>
                                             </div>
                                         </div>
                                     </button>

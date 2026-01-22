@@ -17,17 +17,20 @@ export const adminPlacesFetch = createAsyncThunk('fetch/adminPlaces', async () =
     return data;
 })
 
-export const adminCreatePlaceFetch = createAsyncThunk('admin/createPlace', async (formData) => {
-    const res = await fetch('http://localhost:5000/api/admin/places', {
-        method: 'POST',
-        body: formData,
-        headers: {
-            'admin-password': 'admin123'
-        }
-    });
-    const data = await res.json();
-    return data;
-});
+export const adminCreatePlaceFetch = createAsyncThunk(
+    "admin/createPlace",
+    async (formData) => {
+        const res = await fetch("http://localhost:5000/api/admin/places", {
+            method: "POST",
+            headers: {
+                "admin-password": "admin123"
+            },
+            body: formData
+        });
+        return await res.json();
+    }
+);
+
 
 export const adminUpdatePlaceFetch = createAsyncThunk('admin/updatePlace', async ({ id, formData }) => {
     const res = await fetch(`http://localhost:5000/api/admin/places/${id}`, {
@@ -81,8 +84,10 @@ export const adminPlacesSlice = createSlice({
             state.error = null
         })
         builder.addCase(adminCreatePlaceFetch.fulfilled, (state, action) => {
-            state.places.unshift(action.payload);
-        })
+            state.loading = false
+            state.error = null
+            state.places.push(action.payload);
+        });
 
 
         builder.addCase(adminCreatePlaceFetch.rejected, (state, action) => {
